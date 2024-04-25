@@ -1,0 +1,90 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta name="google-site-verification" content="iNzSj2wvdEOVu1PtrK5FfEiu_teOG2LQn5i3kg-xozQ" />
+            
+            <title>Mini Project</title>
+
+            <!-- Fonts -->
+            <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+            <!-- CSS -->
+            <link rel="stylesheet" href="./css/style.css">
+
+        </head>
+
+        <body>
+
+            <div class="container">
+                <h1 class="heading">Temperature Converter </h1>
+                <p>Masukan suhu derajat Celcius (°C) ke kotak dibawah, lalu tekan tombol ENTER untuk mendapatkan hasil konversi
+                    dalam bentuk Fahrenheit (°F) dan Kelvin (K)
+                </p>
+
+                <div class="inputbox">
+                    <label for="Celcius">Celcius</label>
+                    <input 
+                    required="required"
+                    onchange ="computeTemp(event)"
+                    type="number" 
+                    name="Celcius" 
+                    id="Celcius" 
+                    class="Celcius" 
+                    placeholder=""/>
+                    <span></span>
+                    <i></i>    
+                </div>
+
+                <div class="inputbox">
+                    <label for="fahre">Fahrenheit</label>
+                    <input 
+                    required="required"
+                    onchange="computeTemp(event)"
+                    type="number" 
+                    name="Fahrenheit" 
+                    id="Fahrenheit" 
+                    class="Fahrenheit" 
+                    placeholder=""/>
+                    <span></span>
+                    <i></i>    
+                </div>
+
+                <div class="inputbox">
+                    <label for="Kelvin">Kelvin</label>
+                    <input 
+                    required="required"
+                    onchange="computeTemp(event)"
+                    type="number" 
+                    name="Kelvin" 
+                    id="Kelvin" 
+                    class="Kelvin" 
+                    placeholder=""/>
+                    <span></span>
+                    <i></i>    
+                </div>
+
+                <button onclick="resetForm()">
+                    <span class="button_top"> 
+                        Reset?
+                    </span>
+                </button>
+
+                    <h3>Cara Menghitung</h3>
+                        <p>Mencari Fahrenheit (°F) dari Celsius (°C)</p>
+                            <p>°F = (9/5 x °C) + 32</p>
+                            <p>Mencari Kelvin dari Celsius (°C)</p>
+                            <p>K = °C + 273</p>
+
+
+                        <h3>Hasil</h3>
+                        <p>Hasil dari konversi Fahrenheit (°F) dan Kelvin (K) akan otomatis muncul di bawah.</p>
+                        <p id="resultCelsius"></p>
+                        <p id="resultFahrenheit"></p>
+                        <p id="resultKelvin"></p>
+
+            </div>
+            <script src="./js/script.js"></script>
+        </body>
+    </html>
